@@ -1,0 +1,32 @@
+---
+import logo from "./public/images/starfox-logo.png";
+import dropdown from "./public/images/dropdown-arrow.svg";
+import Selectmenu from "./Selectmenu.svelte";
+---
+
+<header class="bg-primary flex flex-row justify-center text-white">
+    <div class="flex items-center w-[90%]">
+        <div class="flex flex-row flex-1 items-center">
+            <a href="/">
+                <img class="w-20" src={logo.src} alt="starfox-logo" />
+            </a>
+            <h2 class="font-cormorant text-4xl tracking-[.30em]">Starfox</h2>
+        </div>
+        <nav class="flex flex-1 justify-end flex-row ">
+            <ul class="flex flex-row gap-x-5 text-xl">
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <li>
+                    <a href="/projects">Projects</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+                <li>
+                    <button class="flex flex-row items-center w-5">en <img src={dropdown.src} alt="dropdown"></button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -5,10 +5,9 @@ export default {
 		extend: {
 			fontFamily: {
 				montserrat: ['Montserrat', 'sans-serif'],
-				cormorant: ['Cormorant', 'serif'],
 			},
 			colors: {
-				primary: '#4e4065',
+				primary: '#3e3252',
 				secondary: '#efefef',
 				darkpurple: '#6d588f',
 				pink: {

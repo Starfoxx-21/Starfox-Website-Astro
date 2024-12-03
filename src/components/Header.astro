@@ -1,31 +1,31 @@
 ---
+import ChangeLanguage from "../components/ChangeLanguage.svelte";
 import logo from "./public/images/starfox-logo.png";
 import dropdown from "./public/images/dropdown-arrow.svg";
-import starfox from "./public/images/starfox.png";
-import Selectmenu from "./Selectmenu.svelte";
+import Headerlogo from "./ToggleHeaderLogo.svelte";
+import Selectmenu from "./SelectMenu.svelte";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<header class="bg-primary h-14 flex flex-row justify-center text-white">
+<header class="bg-primary fixed top-0 w-full h-14 flex flex-row justify-center text-white z-50">
     <div class="flex items-center w-[90%]">
-        <div class="flex flex-row flex-1 items-center">
-            <a href="/">
-                <img class="w-14" src={logo.src} alt="starfox-logo" />
-            </a>
-            <img class="w-40" src={starfox.src} alt="starfox">
-        </div>
+        <Headerlogo />
         <nav class="hidden md:flex flex-1 justify-end flex-row ">
             <ul class="flex flex-row gap-x-5 text-xl">
                 <li>
-                    <a href="/about">About</a>
+                    <a href="/about">{t("about")}</a>
                 </li>
                 <li>
                     <a href="/projects">Projects</a>
                 </li>
                 <li>
-                    <a href="/contact">Contact</a>
+                    <a href="/contact">{t("contact")}</a>
                 </li>
                 <li>
-                    <button class="flex flex-row items-center w-5">en <img src={dropdown.src} alt="dropdown"></button>
+                    <button class="flex flex-row items-center w-5">{t("lang")} <img src={dropdown.src} alt="dropdown"></button>
                 </li>
             </ul>
         </nav>

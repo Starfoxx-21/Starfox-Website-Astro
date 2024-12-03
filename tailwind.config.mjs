@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				montserrat: ['Montserrat', 'sans-serif'],
+				ubuntu: ['Ubuntu', 'sans-serif'],
 			},
 			colors: {
 				primary: '#3e3252',
@@ -13,7 +13,9 @@ export default {
 				pink: {
 					light: '#d5a7c0',
 					dark: '#bf84a7'
-				}
+				},
+				greyborder: "#efefef",
+				greybordertext: "#545454"
 			},
 		},
 	},

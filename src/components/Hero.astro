@@ -2,16 +2,20 @@
 import landscape from "./public/images/purple-landscape.jpg";
 import logo from "./public/images/starfox-logo.png";
 import starfox from "./public/images/starfox.png";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section>
-    <div class="relative text-white">
+    <div class="relative text-white mt-14">
         <img class="w-full h-[25em] object-none xl:object-cover object-[50%_25%]" src={landscape.src} alt="purple landscape">
         <div class="absolute top-0 left-0 right-0 flex flex-col justify-center items-center z-10">
             <img class="w-[5rem] " src={logo.src} alt="starfox-logo" />
             <img class="w-[14rem]" src={starfox.src} alt="starfox">
             <p class="text-[15px] pt-2">- ASPIRING WEB DEVELOPER -</p>
         </div>
-        <button class="bg-pink-dark w-48 h-11 border-pink-light border-8 rounded-full absolute top-[75%] left-0 right-0 mx-auto flex justify-center items-center z-10">Download Resume</button>
+        <button class="bg-pink-dark w-48 h-11 border-pink-light border-8 rounded-full absolute top-[75%] left-0 right-0 mx-auto flex justify-center items-center z-10">{t("downloadresume")}</button>
     </div>
 </section>

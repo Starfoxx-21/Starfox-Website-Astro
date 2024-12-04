@@ -6,7 +6,7 @@
     }
 </script>
   
-<div class="relative">
+<div class="relative flex flex-1">
     <button on:click={toggleDropdown} class="">
         <img src="/images/menu.svg" alt="dropdown" class="w-10 ml-2" />
     </button>

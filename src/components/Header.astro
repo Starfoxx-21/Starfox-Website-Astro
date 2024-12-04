@@ -1,6 +1,5 @@
 ---
 import ChangeLanguage from "../components/ChangeLanguage.svelte";
-import logo from "./public/images/starfox-logo.png";
 import dropdown from "./public/images/dropdown-arrow.svg";
 import Headerlogo from "./ToggleHeaderLogo.svelte";
 import Selectmenu from "./SelectMenu.svelte";
@@ -12,7 +11,7 @@ const t = useTranslations(lang);
 
 <header class="bg-primary fixed top-0 w-full h-14 flex flex-row justify-center text-white z-50">
     <div class="flex items-center w-[90%]">
-        <Headerlogo />
+        <Headerlogo client:idle />
         <nav class="hidden md:flex flex-1 justify-end flex-row ">
             <ul class="flex flex-row gap-x-5 text-xl">
                 <li>
@@ -30,7 +29,7 @@ const t = useTranslations(lang);
             </ul>
         </nav>
         <div class="md:hidden">
-            <Selectmenu />
+            <Selectmenu client:idle />
         </div>
     </div>
 </header>

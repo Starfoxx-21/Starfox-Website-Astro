@@ -25,6 +25,4 @@ pnpm-debug.log*
 
 /src/components/ChangeLanguage.svelte
 
-/src/components/ToggleHeaderLogo.svelte
-
 /src/components/SelectMenu.svelte

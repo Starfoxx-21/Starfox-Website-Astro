@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				ubuntu: ['Ubuntu', 'sans-serif'],
+				geologica: ['Geologica', 'sans-serif'],
 			},
 			colors: {
 				primary: '#3e3252',

@@ -1,8 +1,8 @@
 ---
-import ChangeLanguage from "../components/ChangeLanguage.svelte";
-import dropdown from "./public/images/dropdown-arrow.svg";
 import Headerlogo from "./ToggleHeaderLogo.svelte";
+import DropdownMenu from "./DropdownMenu.svelte";
 import Selectmenu from "./SelectMenu.svelte";
+import ChangeLanguageMenu from "../components/ChangeLanguageMenu.svelte";
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -24,7 +24,7 @@ const t = useTranslations(lang);
                     <a href="/contact">{t("contact")}</a>
                 </li>
                 <li>
-                    <button class="flex flex-row items-center w-5">{t("lang")} <img src={dropdown.src} alt="dropdown"></button>
+                    <DropdownMenu buttonName={t("lang")} client:idle><ChangeLanguageMenu client:idle /></DropdownMenu>
                 </li>
             </ul>
         </nav>

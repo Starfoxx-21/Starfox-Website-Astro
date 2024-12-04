@@ -22,7 +22,3 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-
-/src/components/ChangeLanguage.svelte
-
-/src/components/SelectMenu.svelte

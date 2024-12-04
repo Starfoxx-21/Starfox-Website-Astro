@@ -7,6 +7,10 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const oppositeT = lang === "en" ? "ελ" : "en";
+const langPages = lang === "en" ? "/el" : "/";
+
 ---
 
 <header class="bg-primary fixed top-0 w-full h-14 flex flex-row justify-center text-white z-50">
@@ -28,8 +32,23 @@ const t = useTranslations(lang);
                 </li>
             </ul>
         </nav>
-        <div class="md:hidden">
-            <Selectmenu client:idle />
+        <div class="md:hidden flex flex-1 justify-end">
+            <Selectmenu client:load>
+                <ul class="flex flex-col gap-x-5 text-lg text-right">
+                    <li>
+                        <a href="/about" class="hover:bg-pink-dark rounded-md px-1">{t("about")}</a>
+                    </li>
+                    <li>
+                        <a href="/projects" class="hover:bg-pink-dark rounded-md px-1">Projects</a>
+                    </li>
+                    <li>
+                        <a href="/contact" class="hover:bg-pink-dark rounded-md px-1">{t("contact")}</a>
+                    </li>
+                    <li>
+                        <a href={langPages} class="hover:bg-pink-dark rounded-md px-1">{oppositeT}</a>
+                    </li>
+                </ul>
+            </Selectmenu>
         </div>
     </div>
 </header>

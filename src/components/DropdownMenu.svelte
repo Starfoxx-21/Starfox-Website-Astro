@@ -1,5 +1,6 @@
 <script>
     import dropdown from "/public/images/dropdown-arrow.svg";
+    import { fade } from 'svelte/transition';
 
     export let buttonName;
 
@@ -11,5 +12,7 @@
     {buttonName} <img src={dropdown.src} alt="dropdown">
 </button>
 {#if showContent}
-    <slot></slot>
+    <div transition:fade={{ duration: 200 }}>
+        <slot></slot>
+    </div>
 {/if}

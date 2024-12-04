@@ -1,7 +1,7 @@
 ---
 import Headerlogo from "./ToggleHeaderLogo.svelte";
 import DropdownMenu from "./DropdownMenu.svelte";
-import Selectmenu from "./SelectMenu.svelte";
+import SelectMenu from "./SelectMenu.svelte";
 import ChangeLanguageMenu from "../components/ChangeLanguageMenu.svelte";
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
@@ -33,7 +33,7 @@ const langPages = lang === "en" ? "/el" : "/";
             </ul>
         </nav>
         <div class="md:hidden flex flex-1 justify-end">
-            <Selectmenu client:load>
+            <SelectMenu client:load>
                 <ul class="flex flex-col gap-x-5 text-lg text-right">
                     <li>
                         <a href="/about" class="hover:bg-pink-dark rounded-md px-1">{t("about")}</a>
@@ -48,7 +48,7 @@ const langPages = lang === "en" ? "/el" : "/";
                         <a href={langPages} class="hover:bg-pink-dark rounded-md px-1">{oppositeT}</a>
                     </li>
                 </ul>
-            </Selectmenu>
+            </SelectMenu>
         </div>
     </div>
 </header>

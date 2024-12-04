@@ -5,7 +5,8 @@ import tailwind from '@astrojs/tailwind';
 
 import svelte from '@astrojs/svelte';
 
-const githubURL = "https://starfox-website-astro.github.io";
+const githubURL = "https://starfoxx-21.github.io";
+const repoName = "/Starfox-Website-Astro"
 
 // https://astro.build/config
 export default defineConfig({
@@ -15,5 +16,5 @@ export default defineConfig({
     defaultLocale: "en",
   },
   site: githubURL,
-  base: 'my-repo',
+  base: repoName,
 });

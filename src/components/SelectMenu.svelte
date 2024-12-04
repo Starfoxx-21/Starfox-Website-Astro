@@ -4,7 +4,7 @@
     import { cubicInOut } from 'svelte/easing';
 
     let isOpen = false;
-  
+    console.log("hi")
 </script>
   
 <div class="relative flex">

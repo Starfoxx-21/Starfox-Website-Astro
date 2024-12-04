@@ -1,8 +1,10 @@
-<section class="flex justify-center w-full">
-    <div class="max-w-[1100px] m-10 flex flex-col">
-        <h2 class="text-darkpurple text-2xl ml-10">Projects</h2>
-        <div class="b-8 border-solid bg-greyborder rounded-3xl mt-1">
+---
+import Carousel from "./Carousel.svelte"
+---
 
-        </div>
+<section class="flex justify-center w-full">
+    <div class="max-w-[1100px] max-h-[800px] m-10 flex flex-col">
+        <h2 class="text-darkpurple text-2xl ml-10">Projects</h2>
+        <Carousel client:idle/>
     </div>
 </section>

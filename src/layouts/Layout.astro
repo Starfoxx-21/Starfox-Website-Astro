@@ -10,6 +10,10 @@ const lang = getLangFromUrl(Astro.url);
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="apple-touch-icon" sizes="180x180" href={import.meta.env.BASE_URL + "/apple-touch-icon.png"}>
+		<link rel="icon" type="image/png" sizes="32x32" href={import.meta.env.BASE_URL + "/favicon-32x32.png"}>
+		<link rel="icon" type="image/png" sizes="16x16" href={import.meta.env.BASE_URL + "/favicon-16x16.png"}>
+		<link rel="manifest" href={import.meta.env.BASE_URL + "/site.webmanifest"}>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">

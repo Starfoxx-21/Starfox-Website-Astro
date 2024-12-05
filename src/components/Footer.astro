@@ -7,33 +7,36 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const date = new Date();
+const currentYear = date.getFullYear();
 ---
 
-<footer class="bg-primary text-white w-full min-h-44 mt-10 flex justify-center">
+<footer class="bg-primary text-white w-full min-h-44 mt-10 flex justify-center items-end">
     <div class="flex flex-col sm:flex-row justify-between items-center my-3 w-[70%] max-[767px]:w-[90%]">
         <div class="flex-1 order-1">
             <ul class="flex flex-row sm:flex-col gap-3 text-xl items-center max-[767px]:content-start">
                 <li>
-                    <a href="/about">{t("about")}</a>
+                    <a href="about">{t("about")}</a>
                 </li>
                 <li>
-                    <a href="/projects">Projects</a>
+                    <a href="projects">Projects</a>
                 </li>
                 <li>
-                    <a href="/contact">{t("contact")}</a>
+                    <a href="contact">{t("contact")}</a>
                 </li>
             </ul>
         </div>
         <div class="flex-2 order-3 sm:order-2 flex flex-col items-center">
             <img class="w-[5rem] max-[767px]:w-[4rem]" src={logo.src} alt="starfox-logo" />
             <img class="w-[14rem] max-[767px]:w-[12rem]" src={starfox.src} alt="starfox">
-            <p class="mt-3 text-sm">© 2024 Starfox. All rights reserved.</p>
+            <p class="mt-3 text-sm">© {currentYear} Starfox. All rights reserved.</p>
         </div>
         <div class="flex-1 order-2 sm:order-3 flex flex-row my-3 max-[980px]:flex-col justify-center items-center">
             <p class="mr-3">{t("findsocial")}</p>
             <div class="flex flex-row">
-                <img class="w-8 mr-2" src={github.src} alt="github">
-                <img class="w-8" src={linkedin.src} alt="linkedin">
+                <a href="https://github.com/Starfoxx-21"><img class="w-8 mr-2" src={github.src} alt="github"></a>
+                <a href="https://www.linkedin.com/in/christianna-anastasiadou/"><img class="w-8" src={linkedin.src} alt="linkedin"></a>
             </div>
         </div>
     </div>

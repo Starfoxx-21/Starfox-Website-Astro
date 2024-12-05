@@ -1,6 +1,6 @@
 <script>
-  import logo from "/public/images/starfox-logo.png";
-  import starfox from "/public/images/starfox.png";
+  import logo from "../images/starfox-logo.png";
+  import starfox from "../images/starfox.png";
   import { onMount } from 'svelte';
 
   let isVisible = false;

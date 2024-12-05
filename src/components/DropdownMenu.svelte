@@ -1,5 +1,5 @@
 <script>
-    import dropdown from "/public/images/dropdown-arrow.svg";
+    import dropdown from "../images/dropdown-arrow.svg";
     import { fade } from 'svelte/transition';
 
     export let buttonName;

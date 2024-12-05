@@ -1,8 +1,12 @@
 <script>
+  import JewelryCommerce from "../images/jewelry-commerce.png";
+  import StarfoxPortofolio from "../images/starfox-portofolio.png";
+  import RecipesWebsite from "../images/recipes-website.png";
+  
   let images = [
-    '/images/jewelry-commerce.png',
-    '/images/starfox-portofolio.png',
-    '/images/recipes-website.png',
+    JewelryCommerce.src,
+    StarfoxPortofolio.src,
+    RecipesWebsite.src,
   ];
 
   let currentIndex = 0;

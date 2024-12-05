@@ -1,5 +1,5 @@
 <script>
-    import menu from "/public/images/menu.svg";
+    import menu from "../images/menu.svg";
     import { slide } from 'svelte/transition';
     import { cubicInOut } from 'svelte/easing';
 

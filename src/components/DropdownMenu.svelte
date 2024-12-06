@@ -9,7 +9,7 @@
 </script>
 
 <button onclick={()=>{showContent = !showContent}} class="lang-button relative flex flex-row items-center w-5">
-    {buttonName} <img src={dropdown.src} alt="dropdown">
+    {buttonName} <img src={dropdown.src} alt="dropdown arrow">
 </button>
 {#if showContent}
     <div transition:fade={{ duration: 200 }}>

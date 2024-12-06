@@ -30,7 +30,7 @@
 
 <div class="relative max-w-[1100px] overflow-hidden mt-1">
   <div class="w-full transition-transform duration-500 ease-in-out">
-      <img src={images[currentIndex]} alt="carousel" class="w-full object-cover rounded-lg shadow-lg"/>
+      <img src={images[currentIndex]} alt="project images" class="w-full object-cover rounded-lg shadow-lg"/>
   </div>
   <button
     onclick={prev} class="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 bg-pink-dark text-white rounded-full hover:bg-pink-light" aria-label="Previous image">&#10094;

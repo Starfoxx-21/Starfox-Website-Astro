@@ -9,6 +9,10 @@ const t = useTranslations(lang);
 
 const oppositeT = lang === "en" ? "ελ" : "en";
 const langPages = lang === "en" ? "el" : "/Starfox-Website-Astro/";
+
+function buildLink(path: string) {
+    return import.meta.env.BASE_URL + "/" + path;
+}
 ---
 
 <header class="bg-primary fixed top-0 w-full h-14 flex flex-row justify-center text-white z-50">
@@ -17,20 +21,20 @@ const langPages = lang === "en" ? "el" : "/Starfox-Website-Astro/";
         <nav class="hidden md:flex flex-1 justify-end flex-row ">
             <ul class="flex flex-row gap-x-5 text-xl">
                 <li>
-                    <a href="about">{t("about")}</a>
+                    <a href={buildLink("about")}>{t("about")}</a>
                 </li>
                 <li>
-                    <a href="projects">Projects</a>
+                    <a href={buildLink("projects")}>Projects</a>
                 </li>
                 <li>
-                    <a href="contact">{t("contact")}</a>
+                    <a href={buildLink("contact")}>{t("contact")}</a>
                 </li>
                 <li>
                     <DropdownMenu buttonName={t("lang")} client:idle>
                         <div class="absolute bg-pink-light border-solid border-pink-dark border-2 rounded-md w-10 text-center">
                             <ul class="my-1">
                               <li><a href="/Starfox-Website-Astro/" class="hover:bg-pink-dark rounded-md px-1">en</a></li>
-                              <li><a href="el" class="hover:bg-pink-dark rounded-md px-1">ελ</a></li>
+                              <li><a href={buildLink("el")} class="hover:bg-pink-dark rounded-md px-1">ελ</a></li>
                             </ul>
                         </div>
                     </DropdownMenu>
@@ -41,16 +45,16 @@ const langPages = lang === "en" ? "el" : "/Starfox-Website-Astro/";
             <SelectMenu client:load>
                 <ul class="flex flex-col gap-x-5 text-lg text-right">
                     <li>
-                        <a href="about" class="hover:bg-pink-dark rounded-md px-1">{t("about")}</a>
+                        <a href={buildLink("about")} class="hover:bg-pink-dark rounded-md px-1">{t("about")}</a>
                     </li>
                     <li>
-                        <a href="projects" class="hover:bg-pink-dark rounded-md px-1">Projects</a>
+                        <a href={buildLink("projects")} class="hover:bg-pink-dark rounded-md px-1">Projects</a>
                     </li>
                     <li>
-                        <a href="contact" class="hover:bg-pink-dark rounded-md px-1">{t("contact")}</a>
+                        <a href={buildLink("contact")} class="hover:bg-pink-dark rounded-md px-1">{t("contact")}</a>
                     </li>
                     <li>
-                        <a href={langPages} class="hover:bg-pink-dark rounded-md px-1">{oppositeT}</a>
+                        <a href={buildLink(langPages)} class="hover:bg-pink-dark rounded-md px-1">{oppositeT}</a>
                     </li>
                 </ul>
             </SelectMenu>

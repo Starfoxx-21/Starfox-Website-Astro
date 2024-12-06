@@ -10,6 +10,10 @@ const t = useTranslations(lang);
 
 const date = new Date();
 const currentYear = date.getFullYear();
+
+function buildLink(path: string) {
+    return import.meta.env.BASE_URL + "/" + path;
+}
 ---
 
 <footer class="bg-primary text-white w-full min-h-44 mt-10 flex justify-center items-end">
@@ -17,13 +21,13 @@ const currentYear = date.getFullYear();
         <div class="flex-1 order-1">
             <ul class="flex flex-row sm:flex-col gap-3 text-xl items-center max-[767px]:content-start">
                 <li>
-                    <a href="about">{t("about")}</a>
+                    <a href={buildLink("about")}>{t("about")}</a>
                 </li>
                 <li>
-                    <a href="projects">Projects</a>
+                    <a href={buildLink("projects")}>Projects</a>
                 </li>
                 <li>
-                    <a href="contact">{t("contact")}</a>
+                    <a href={buildLink("contact")}>{t("contact")}</a>
                 </li>
             </ul>
         </div>

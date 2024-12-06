@@ -9,7 +9,9 @@
   onMount(() => {
     const path = window.location.pathname;
 
-    if (path === "/Starfox-Website-Astro/" || path === "/Starfox-Website-Astro/el") {
+    if (path === "/Starfox-Website-Astro/" || 
+        path === "/Starfox-Website-Astro/el" + "/" ||
+        path === "/Starfox-Website-Astro/el") {
       shouldToggle = true;
     } else {
       isVisible = true;

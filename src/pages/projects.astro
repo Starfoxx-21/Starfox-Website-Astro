@@ -1,11 +1,18 @@
 ---
 import PagesLayout from "../layouts/PagesLayout.astro";
-
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 <div class="flex flex-col justify-between items-center min-h-screen">
     <PagesLayout>
         <div class="max-w-[1100px] mt-14 flex flex-col ">
-            
+            <div class="m-10">
+                <h2 class="text-darkpurple text-2xl ml-10">Projects</h2>
+                <div class="text-greybordertext b-8 border-solid bg-greyborder rounded-3xl">
+                    <div class="m-5 p-5">
+                        <ProjectCard />
+                    </div>
+                </div>
+            </div>
         </div>
     </PagesLayout>
 </div>

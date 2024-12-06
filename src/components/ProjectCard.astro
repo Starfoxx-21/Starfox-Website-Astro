@@ -1,0 +1,34 @@
+---
+import JewelryCommerce from "../images/jewelry-commerce.png";
+import StarfoxPortofolio from "../images/starfox-portofolio.png";
+import RecipesWebsite from "../images/recipes-website.png";
+
+let projects = [
+    {
+        title: "Jewelry Commerce",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean viverra velit in nunc vulputate, vitae semper libero condimentum. Nam eget ante urna. Nam efficitur risus nec mauris aliquet accumsan. Phasellus elementum tincidunt felis at hendrerit. Duis justo nulla, ornare in semper a, dapibus sit amet neque. Nulla rhoncus egestas arcu quis imperdiet. Duis ipsum nulla, vestibulum nec cursus eu, placerat in urna. Donec at enim odio. Quisque sed porttitor orci. Fusce interdum luctus mi ac semper. Quisque at augue elit.",
+        image: JewelryCommerce.src,
+        alt: "Jewelry Commerce Project",
+    },
+    {
+        title: "Starfox Portofolio",
+        description: "Suspendisse tempor eleifend auctor. Pellentesque sagittis viverra neque convallis scelerisque. Cras erat neque, ultricies at aliquam eget, placerat quis sapien. Vivamus vitae diam sit amet erat imperdiet suscipit. Sed facilisis gravida magna, eget molestie leo. Nunc fringilla auctor maximus. Proin elementum velit velit, sit amet efficitur enim pulvinar et. Vivamus pharetra quis metus vitae pellentesque. Sed nec sem et magna tincidunt rutrum. Aliquam et enim quis mauris vehicula sagittis. Praesent at sem ac dui sodales aliquam in sit amet leo.",
+        image: StarfoxPortofolio.src,
+        alt: "Starfox Portofolio Project",
+    },
+    {
+        title: "Recipes Website",
+        description: "Sed nec commodo urna. Aliquam faucibus, nulla sit amet molestie tincidunt, odio lorem ultrices urna, nec interdum magna arcu quis nibh. Duis at sapien a nisi lacinia varius quis vitae enim. Quisque dui lacus, mollis quis augue efficitur, fermentum elementum ante. Nam in ex vitae velit posuere finibus. Aenean pharetra, ex nec porttitor faucibus, erat justo rutrum quam, et tincidunt lectus urna at felis. Cras luctus condimentum lorem at bibendum. Duis tortor mi, luctus nec ex a, blandit pretium urna.",
+        image: RecipesWebsite.src,
+        alt: "Recipes Website Project",
+    }
+]
+---
+
+{projects.map(({ title, description, image, alt }) => (
+    <div class="flex flex-col items-center gap-5 mb-5">
+      <h2 class="text-darkpurple text-xl">{title}</h2>
+      <p class="">{description}</p>
+      <img class="border-double border-darkpurple border-4 p-1" src={image} alt={alt} />
+    </div>
+  ))}

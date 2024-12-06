@@ -32,7 +32,7 @@
   });
 </script>
 
-<div class="transition-all duration-300 ease-in-out transform" class:opacity-0={!isVisible} class:opacity-100={isVisible} class:scale-50={!isVisible} class:scale-100={isVisible}>
+<div class="transition-all duration-300 ease-in-out transform" class:opacity-0={!isVisible} class:opacity-100={isVisible} class:scale-50={!isVisible} class:scale-100={isVisible} class:pointer-events-none={!isVisible}>
   <a class="flex flex-row flex-1 items-center" href="/Starfox-Website-Astro/">
     <img class="w-14" src={logo.src} alt="starfox logo"/>
     <img class="w-52" src={starfox.src} alt="starfox">

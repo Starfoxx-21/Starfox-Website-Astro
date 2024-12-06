@@ -16,6 +16,10 @@ export const ui = {
     "contactphraseone": "Get in",
     "contactphrasetwo": "Touch",
     "contactbuttonphrase": "Contact me",
+    "contacttext": "I'm always open to connecting with like-minded individuals and discussing new opportunities. Whether you're interested in collaborating on a project, seeking advice, or just want to chat about web development, feel free to reach out! You can contact me via the form below, or connect with me on social media through the links in the footer. I look forward to hearing from you!",
+    "formname": "Name*",
+    "formsubject": "Subject*",
+    "formsubmit": "Submit",
     "findsocial": "Find me on:",
   },
   el: {
@@ -28,6 +32,10 @@ export const ui = {
     "contactphraseone": "Επικοινωνήστε ",
     "contactphrasetwo": "μαζί μου",
     "contactbuttonphrase": "Μάθετε περισσότερα",
+    "contacttext": "Πάντα είμαι ανοιχτή σε νέες συνδέσεις και συζητήσεις για νέες ευκαιρίες. Είτε ενδιαφέρεστε για συνεργασία σε κάποιο έργο, είτε χρειάζεστε συμβουλές, είτε απλώς θέλετε να συζητήσουμε για την ανάπτυξη ιστοσελίδων, μην διστάσετε να επικοινωνήσετε μαζί μου! Μπορείτε να επικοινωνήσετε μαζί μου μέσω της φόρμας παρακάτω ή να συνδεθείτε μαζί μου στα κοινωνικά δίκτυα μέσω των συνδέσμων στο υποσέλιδο. Ανυπομονώ να σας ακούσω!",
+    "formname": "Όνομα*",
+    "formsubject": "Θέμα*",
+    "formsubmit": "Αποστολή",
     "findsocial": "Θα με βρείτε εδώ:"
   },
 };

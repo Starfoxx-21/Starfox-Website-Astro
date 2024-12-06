@@ -1,8 +1,35 @@
 ---
 import PagesLayout from "../layouts/PagesLayout.astro";
+import contactMe from "../images/contact-me-pic.jpg";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
-
-<PagesLayout>
-
-</PagesLayout>
+<div class="flex flex-col justify-between items-center min-h-screen">
+    <PagesLayout>
+        <div class="max-w-[1100px] mt-14 flex flex-col">
+            <div class="m-10">
+                <h2 class="text-darkpurple text-2xl ml-10">Contact Me</h2>
+                <div class="b-8 border-solid bg-greyborder rounded-3xl mt-1">
+                    <p class="text-justify text-greybordertext p-3 m-5">{t("contacttext")}</p>
+                </div>
+                <div class="flex flex-col md:flex-row justify-around items-center gap-5 mt-7">
+                    <img class="w-96 h-80 object-cover border-solid border-primary border-2" src={contactMe.src} alt="fox girl on computer">
+                    <form class="flex flex-col justify-around items-center gap-5 w-fit">
+                        <div>
+                            <input type="text" id="name" name="name" class="w-72 block p-2 border border-gray-300 rounded-md text-greybordertext" placeholder={t("formname")} />
+                        </div>
+                        <div>
+                            <input type="email" id="email" name="email" class="w-72 block p-2 border border-gray-300 rounded-md text-greybordertext" placeholder="Email*" />
+                        </div>
+                        <div>
+                            <textarea id="subject" name="subject" class="h-32 w-72 block p-2 border border-gray-300 rounded-md text-greybordertext" placeholder={t("formsubject")} />
+                        </div>
+                        <button type="submit" class="bg-pink-dark w-28 h-11 border-pink-light text-white border-8 rounded-full flex justify-center items-center z-10">{t("formsubmit")}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </PagesLayout>
+</div>

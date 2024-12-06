@@ -11,7 +11,19 @@ const oppositeT = lang === "en" ? "ελ" : "en";
 const langPages = lang === "en" ? "el" : "";
 
 function buildLink(path: string) {
-    return import.meta.env.BASE_URL + "/" + path;
+    if (lang === "el") {
+        return import.meta.env.BASE_URL + "/" + lang + "/" + path;
+    } else {
+        return import.meta.env.BASE_URL + "/" + path;
+    }
+}
+
+function buildLinkSelectMenu(path: string) {
+    if (lang === "el") {
+        return import.meta.env.BASE_URL + "/" + path;
+    } else {
+        return import.meta.env.BASE_URL + "/" + path;
+    }
 }
 ---
 
@@ -54,7 +66,7 @@ function buildLink(path: string) {
                         <a href={buildLink("contact")} class="hover:bg-pink-dark rounded-md px-1">{t("contact")}</a>
                     </li>
                     <li>
-                        <a href={buildLink(langPages)} class="hover:bg-pink-dark rounded-md px-1">{oppositeT}</a>
+                        <a href={buildLinkSelectMenu(langPages)} class="hover:bg-pink-dark rounded-md px-1">{oppositeT}</a>
                     </li>
                 </ul>
             </SelectMenu>

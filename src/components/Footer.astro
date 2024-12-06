@@ -12,7 +12,11 @@ const date = new Date();
 const currentYear = date.getFullYear();
 
 function buildLink(path: string) {
-    return import.meta.env.BASE_URL + "/" + path;
+    if (lang === "el") {
+        return import.meta.env.BASE_URL + "/" + lang + "/" + path;
+    } else {
+        return import.meta.env.BASE_URL + "/" + path;
+    }
 }
 ---
 
